@@ -1,37 +1,37 @@
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #507A2E;
+    background-color: #ffffff;
 }
 
 header {
     background-color: #ffffff;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
-   
-    
     display: flex;
-    justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
 .logo {
-    height:60px; 
-    margin-right: 60px;
-    
+    height: 60px;
+    margin-left: 10%;
+    margin-right: 5%;
 }
 
-nav {
-    display: inline-block;
+.desktop-nav {
+    display: flex;
+    align-items: center;
 }
 
-nav a {
+.desktop-nav a {
     color: #000000;
     text-decoration: none;
-    margin: 0 45px;
-    font-size: 20px;
+    margin: 0 45px; /* Réduire la marge pour un espacement plus serré */
+    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
 }
 
 .btn {
@@ -41,6 +41,7 @@ nav a {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
 }
 
 .btn:hover {
@@ -51,3 +52,93 @@ nav a {
     color: #507A2E;
     text-decoration: underline;
 }
+
+.rbq {
+    color: #000000;
+}
+
+#inscription {
+    margin-right: 5px;
+    font-size: 16px; /* Réduire la taille de la police pour un affichage plus compact */
+}
+
+#santesenior {
+    width: 20%;
+}
+
+.logocenter {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#accueil {
+    width: 100%;
+    margin-top: 0;
+}
+
+.triplephoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.triplephoto img {
+    width: 33.33%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.mobile-nav {
+    text-align: center;
+    display: none;
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle.open {
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 767px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-nav.show{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+    .mobile-nav a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
+}
+}
+
+
+
