@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    margin-top: 100px;
 }
 
 header {
@@ -14,7 +15,18 @@ header {
     align-items: center;
     padding-top: 1%;
     padding-bottom: 1%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
 }
+
+header.scrolled{
+
+    background-color:#ffeb99;
+}
+
+
 
 .logo {
     height: 60px;
@@ -25,13 +37,21 @@ header {
 .desktop-nav {
     display: flex;
     align-items: center;
+
 }
 
 .desktop-nav a {
     color: #000000;
     text-decoration: none;
-    margin: 0 45px; /* Réduire la marge pour un espacement plus serré */
-    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 26%;
+    white-space: nowrap;
+
+}
+.rbq {
+    color: #000000;
+    
 }
 
 .btn {
@@ -41,7 +61,8 @@ header {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
+    font-size: 18px; 
+    box-shadow: 2px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
@@ -53,17 +74,23 @@ header {
     text-decoration: underline;
 }
 
-.rbq {
-    color: #000000;
-}
-
 #inscription {
     margin-right: 5px;
-    font-size: 16px; /* Réduire la taille de la police pour un affichage plus compact */
+    font-size: 16px;
 }
+
+/* --------------- début section 1 ---------------*/
+
+.prm_acc{
+
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 
 #santesenior {
     width: 20%;
+    margin-bottom: 40px;
 }
 
 .logocenter {
@@ -75,14 +102,23 @@ header {
 #accueil {
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
+/* --------------- fin section 1 ---------------*/
+
+
+/* --------------- début section 2 ---------------*/
 
 .triplephoto {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     margin: 0 auto;
+    margin-top: 0;
+    padding: 0;
 }
 
 .triplephoto img {
@@ -91,6 +127,72 @@ header {
     margin: 0;
 }
 
+.call_to_action {
+    background-color: #ffeb99;
+    position: absolute; 
+    width: 100%;
+    z-index: 10; 
+    height: 40%;
+    bottom: 0;
+   line-height: 0;
+   text-align: center;
+}
+
+#bouton_section2{
+    background-color: #FFCF02;
+    color: #000000;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#bouton_section2:hover{
+    background-color:#fff;
+}
+
+#titre_section2{
+    font-size: 60px;
+    font-weight: bold;
+}
+#phrase_section2{
+    font-size: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .call_to_action {
+        height: auto; 
+    }
+
+    #titre_section2 {
+        font-size: 30px; 
+    }
+
+    #phrase_section2 {
+        font-size: 15px; 
+    }
+}
+
+
+/* --------------- fin section2 ---------------*/
+
+/* --------------- début section3 ---------------*/
+
+.img_section3{
+    height: auto;
+    width: 50%;
+    margin:0;
+    padding: 0;
+}
+.section3{
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* --------------- fin section3 ---------------*/
+
+
+/* --------------- début menu burger ---------------*/
 .mobile-nav {
     text-align: center;
     display: none;
@@ -136,9 +238,49 @@ header {
     color: #000000;
     text-decoration: none;
     margin: 10px 0;
-    font-size: 18px; /* Réduire la taille de la police pour un affichage plus compact */
+    font-size: 18px;
 }
 }
+/* --------------- fin menu burger ---------------*/
 
 
 
+/* --------------- début footer ---------------*/
+
+.footer_design {
+    width: 70%;
+    height: auto;
+    display: flex;
+}
+
+.footer_logo {
+    height: 80px;
+    margin-top: 20px;
+}
+
+.footer_reseaux {
+    height: 80px;
+}
+
+footer {
+    background-color: #fff9e4;
+    color: #000000;
+    padding: 20px 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer_alignement {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* --------------- fin footer ---------------*/
