@@ -4,25 +4,26 @@
 <footer>
 
 
-<div class="container">
+<div class="container_footer">
 
 
 <div class="footer_alignement">
     <img class="footer_logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_footer.png" alt="logo du footer">
-    <div>
-        <h3>Contact</h3>
+    
+    <div class="align_p1">
+        <p class="titre_footer">Contact</p>
         <p>santesenior@gmail.com</p>
         <p>04834545454</p>
     </div>
 
     <div>
-        <h3>Aide</h3>
+        <p class="titre_footer">Aide</p>
         <p>Mention légale</p>
         <p>Politique de confidentialité</p>
     </div>
 
     <div>
-        <h3>Suivez-nous</h3>
+        <p class="titre_footer">Suivez-nous</p>
         <img class="footer_reseaux" src="<?php echo get_template_directory_uri(); ?>/assets/img/reseaux.png" alt="réseaux sociaux">
     </div>
 
