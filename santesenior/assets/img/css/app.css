@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     margin-top: 100px;
+    width: 100%;
 }
 h1{
     font-size: 60px;
@@ -20,6 +21,9 @@ h3{
     font-weight: normal;
 }
 
+/* --------------- début header ---------------*/
+
+
 header {
     background-color: #ffffff;
     color: #000000;
@@ -29,10 +33,11 @@ header {
     padding-top: 1%;
     padding-bottom: 1%;
     position: fixed;
-    top: 0px;
-    width: 100%;
+    top: 0;
     z-index: 100;
-    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    
 }
 
 header.scrolled{
@@ -59,7 +64,7 @@ header.scrolled{
     text-decoration: none;
     font-size: 18px;
     margin-left: 5%;
-    margin-right: 26%;
+    margin-right: 18%;
     white-space: nowrap;
 
 }
@@ -96,11 +101,95 @@ header.scrolled{
 
 @media only screen and (max-width: 768px) {
     .btn{
-        font-size: 10px;
-        padding: 6px 8.5px;
-    }
-   
+        font-size: 12px;
+        padding: 8px 10.5px;
+    }  
+
 }
+
+/* --------------- fin header ---------------*/
+
+/* --------------- début menu burger ---------------*/
+
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: -250px;
+    background-color: #ffffff;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+    display: none;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #4F7A2D;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Active class */
+  .sidenav.active {
+    right: 0;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+  }
+  
+  /* Icône burger */
+  .burger-icon span {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  .burger-icon{
+    position: fixed;
+    top: 2%;
+    right: 18%;
+  }
+  
+
+
+  @media only screen and (max-width: 768px) {
+    .sidenav {
+      display: block;
+    }
+  
+    .burger-icon span {
+      display: block;
+    }
+  
+    .desktop-nav {
+      display: none;
+    }
+  }
+
+/* --------------- fin menu burger ---------------*/
 
 
 /* --------------- début section 1 ---------------*/
@@ -152,16 +241,14 @@ header.scrolled{
         width: 100%;
         height: 100%;
         transform: translate(-50%, -50%); /* Centre le texte par rapport à son conteneur */
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.5);
         padding-left: 20%;
         padding-right: 20%;
-        padding-top: 12%;
+        padding-top: 10%;
 
     }
   
 }
-
-
 
 @media only screen and (max-width: 768px) {
     #santesenior{
@@ -169,7 +256,6 @@ header.scrolled{
     }
    
 }
-
 
 
 
@@ -245,10 +331,10 @@ header.scrolled{
     display: flex;
     flex-direction: column;
     height: auto;
+    width: 100%;
 }
 .img_section3{
-    object-fit: cover;
-    height: 50vh;
+    height: auto;
     width: 100%;
     margin:0;
     padding: 0;
@@ -256,11 +342,7 @@ header.scrolled{
     
 
 }
-.section3{
 
-    position: relative;
-    display: flex;
-}
 
 .section3_texte{
 
@@ -269,9 +351,10 @@ header.scrolled{
     text-align: center;
     font-size: 30px;
     line-height: 2;
-    padding: 20px;
+    padding:0;
     margin-bottom: 25px;
     margin-top: 25px;
+    
 }
 
 
@@ -324,59 +407,6 @@ margin-bottom: 20px;
 
 
 /* --------------- fin section3 ---------------*/
-
-
-/* --------------- début menu burger ---------------*/
-.mobile-nav {
-    text-align: center;
-    display: none;
-}
-
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-toggle.open {
-    transform: rotate(90deg);
-}
-
-@media screen and (max-width: 767px) {
-    .desktop-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .mobile-nav.show{
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    z-index: 1000;
-}
-
-    .mobile-nav a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    margin: 10px 0;
-    font-size: 18px;
-}
-}
-/* --------------- fin menu burger ---------------*/
-
 
 
 /* --------------- début footer ---------------*/
@@ -444,6 +474,142 @@ footer {
     .footer_alignement{
         margin-bottom: 2%;
     }
+
+   
 }
 
 /* --------------- fin footer ---------------*/
+
+
+/* --------------- début inscription ---------------*/
+
+.page-id-12 {
+
+    background-color:#ffeb99 ;
+}
+
+
+.form_cont{
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.form {
+    width: 51%;
+    height: auto;
+    max-width: 650px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    padding: 25px;
+    z-index: 3 ;
+}
+
+.img_insc {
+    width: 46%;
+    height: auto;
+    position: relative;
+    margin-left: 54%; 
+    margin-top: -41.5%;
+    display: flex;
+    border-radius: 10px;
+
+  
+}
+
+
+
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 17%; 
+    padding-top: 4%;
+    margin-left: 5%;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 48%;
+    padding-bottom: 15px;
+}
+
+.user-input-box label{
+    width: 95%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.user-input-box input{
+    height: 50px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0 10px;
+    background-color: #fff9e4;
+
+}
+
+#bouton_insc{
+    background-color: #FFCF02;
+    color: #000000;
+
+}
+
+.form_val{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+#text_val{
+
+    margin-left: 5%;
+}
+
+@media(max-width: 600px){
+    .form{
+        min-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+
+    .user-input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .user-input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+
+
+    .main-user-info{
+        max-height: 380px;
+        overflow: auto;
+    }
+
+
+
+    .img_insc{
+        display: none;
+    }
+
+   
+    .form_val{
+    margin-top: 5%;
+    
+    }
+    
+}
+

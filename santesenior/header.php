@@ -14,6 +14,8 @@
 
 </head>
 <body <?php body_class(); ?>>
+<body class="page-id-12">
+
 <?php wp_body_open(); ?>
 
 <header>
@@ -23,50 +25,29 @@
         <a class="rbq" href="#">Dashboard</a>
         <a class="rbq" href="#">Mon programme</a>
         <a class="rbq" href="#">A propos</a>
-        <a class="rbq" id="inscription">Inscription</a>
-        <button class="btn">Connexion</button>
-</nav>
+        <a class="rbq" id="inscription" href="">Inscription</a>
+        <button class="btn" href="">Connexion</button>
+    </nav>
 
-<div class="menu-toggle" id="mobile-menu">&#9776;</div>
+<div id="mySidenav" class="sidenav">
+  <a id="closeBtn" href="#" class="close">×</a>
+  <ul>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Mon programme</a></li>
+    <li><a href="#">A propos</a></li>
+  </ul>
+</div>
 
+<a href="#" id="openBtn">
+  <span class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</a>
 
-        <nav class="mobile-nav">
-            <a href="#">Accueil</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
 </header>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const mobileMenuToggle = document.getElementById('mobile-menu');
-        const mobileNav = document.querySelector('.mobile-nav'); 
 
-        mobileMenuToggle.addEventListener('click', function () {
-            mobileNav.classList.toggle('show');
-        });
-    });
-</script>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
 
-            // Ajustez la valeur selon le point où vous voulez que le fondu commence
-            var scrollTrigger = 50;
-
-            if (scroll > scrollTrigger) {
-                // Calcul de l'opacité en fonction du défilement
-                var opacity = (scroll - scrollTrigger) / (200 - scrollTrigger); // Ajustez la valeur pour le fondu désiré
-
-                // Affecter la nouvelle couleur de fond avec l'opacité
-                $('header').css('background-color','rgba(255,249,228, ' +opacity+ ' )');
-            } else {
-                // Si en haut de la page, la couleur est blanche
-                $('header').css('background-color', 'rgba(255, 255, 255, 1)');
-            }
-        }); 
-    });
-</script>

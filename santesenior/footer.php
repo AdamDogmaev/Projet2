@@ -36,6 +36,43 @@
 </footer>
 
 
+<script>
+var sidenav = document.getElementById("mySidenav");
+var openBtn = document.getElementById("openBtn");
+var closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+function openNav() {
+  sidenav.classList.add("active");
+}
+
+function closeNav() {
+  sidenav.classList.remove("active");
+}
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            var scrollTrigger = 50;
+
+            if (scroll > scrollTrigger) {
+                var opacity = (scroll - scrollTrigger) / (200 - scrollTrigger); 
+
+                $('header').css('background-color','rgba(255,249,228, ' +opacity+ ' )');
+            } else {
+                $('header').css('background-color', 'rgba(255, 255, 255, 1)');
+            }
+        }); 
+    });
+</script>
 
 </body>
 </html>
