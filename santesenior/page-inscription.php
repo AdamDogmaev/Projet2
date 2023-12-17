@@ -2,7 +2,12 @@
 
 
 <section class="form_cont">
+    <div id="titre_insc">
+    <h2>Inscription</h2>
+    <h3 id="titre_insc_h3"> - Le début d'un grand changement!</h3>
+    </div>
 <div id="form_color">
+    
     <div class="form">
 
       <form action="#">
@@ -54,8 +59,11 @@
         </div>
 
         <div class="form_val">
-            <div id="text_val"><a href="#">J'ai déjâ un compte</a></div>
-            <div id="btn_val"><button class="btn" id="bouton_insc">Inscription</button></div>
+            <div id="text_val"><a href="http://localhost/wordpress/connection/">J'ai déjà un compte</a></div>
+
+            <button class="btn" id="bouton_insc" type="button">Confirmer</button>      
+
+        </div>
         </div>
           
         </div>

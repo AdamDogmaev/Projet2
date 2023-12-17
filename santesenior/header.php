@@ -15,18 +15,20 @@
 </head>
 <body <?php body_class(); ?>>
 <body class="page-id-12">
+<body class="page-id-20">
+<body class="page-id-22" >
+  
 
 <?php wp_body_open(); ?>
 
 <header>
-    <img class= "logo"src="<?php echo get_template_directory_uri(); ?>/assets/img/Fichier 3.svg" alt="logo">
-
+    <img class= "logo" onclick="window.location.href='http://localhost/wordpress/';" src="<?php echo get_template_directory_uri(); ?>/assets/img/Fichier 3.svg" alt="logo">
     <nav class="desktop-nav">
-        <a class="rbq" href="#">Dashboard</a>
-        <a class="rbq" href="#">Mon programme</a>
-        <a class="rbq" href="#">A propos</a>
-        <a class="rbq" id="inscription" href="">Inscription</a>
-        <button class="btn" href="">Connexion</button>
+        <a class="rbq" href="http://localhost/wordpress/inscription/">Dashboard</a>
+        <a class="rbq" href="http://localhost/wordpress/inscription/">Mon programme</a>
+        <a class="rbq" href="http://localhost/wordpress/inscription/">A propos</a>
+        <a class="rbq" id="inscription" href="http://localhost/wordpress/inscription/">Inscription</a>
+        <button class="btn" onclick="window.location.href='http://localhost/wordpress/connection/'">Connexion</button>
     </nav>
 
 <div id="mySidenav" class="sidenav">

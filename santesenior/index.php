@@ -15,7 +15,7 @@
                 Une ressource précieuse pour améliorer votre bien-être!"</h3>
             
             <h2> Pourquoi ne pas vous aussi faire partie de l'aventure?</h2>
-            <button class="btn" > Inscription</button> 
+            <button class="btn" onclick="window.location.href='http://localhost/wordpress/inscription/'"> Inscription</button> 
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@
     <div class="call_to_action">
         <h1>Découvrez nos exercices</h1>
         <h2>le chemin vers une vie active et épanouissante.</h2>
-        <button class="btn" id="bouton_section2">Inscription</button>
+        <button class="btn" id="bouton_section2" onclick="window.location.href='http://localhost/wordpress/inscription/'">Inscription</button>
     </div>
 </div>
 
@@ -50,7 +50,7 @@
         <p>Suivez votre progression sur mobile.</p>
     
 
-    <button class="btn" id="bouton_section3">Inscription</button>
+    <button class="btn" id="bouton_section3" onclick="window.location.href='http://localhost/wordpress/inscription/'">Inscription</button>
 
 </div>
 </section>

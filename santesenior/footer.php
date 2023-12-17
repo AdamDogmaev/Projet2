@@ -74,5 +74,75 @@ function closeNav() {
     });
 </script>
 
+
+<script>
+    function redirectToAftInscription() {
+        window.location.href = 'http://localhost/wordpress/aft_inscription/';
+    }
+
+    document.getElementById('bouton_insc').addEventListener('click', redirectToAftInscription);
+</script>
+<script>
+    function redirectToFormulaire() {
+        window.location.href = 'http://localhost/wordpress/Formulaire/';
+    }
+
+    document.getElementById('aft_btn').addEventListener('click', redirectToFormulaire);
+</script>
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+
+  dots[slideIndex-1].className += " active";
+
+  if (slideIndex === 5) {
+        document.body.style.backgroundColor = "#FFCF02";
+    }
+    
+    
+    if (slideIndex === 4) {
+        document.body.style.backgroundColor = "#FFFFFF";
+    } if (slideIndex === 3) {
+        document.body.style.backgroundColor = "#FFFFFF";
+    } if (slideIndex === 2) {
+        document.body.style.backgroundColor = "#FFFFFF";
+    } if (slideIndex === 1) {
+        document.body.style.backgroundColor = "#FFFFFF";
+    }
+}
+
+</script>
+
+
+
 </body>
 </html>
+
