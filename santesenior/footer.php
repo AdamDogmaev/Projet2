@@ -18,8 +18,8 @@
 
     <div>
         <p class="titre_footer">Aide</p>
-        <p>Mention légale</p>
-        <p>Politique de confidentialité</p>
+        <a href="<?php echo home_url('mention') ?>"><p>Mention légale</p></a>
+        <a href="<?php echo home_url('mention') ?>"><p>Politique de confidentialité</p></a>
     </div>
 
     <div>
@@ -36,23 +36,7 @@
 </footer>
 
 
-<script>
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
-
-function openNav() {
-  sidenav.classList.add("active");
-}
-
-function closeNav() {
-  sidenav.classList.remove("active");
-}
-
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

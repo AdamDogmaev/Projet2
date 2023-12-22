@@ -4,7 +4,7 @@
 
     <h2 class="title_quiz">Formulaire de suivi</h2>
 
-    <form class="form_quiz" action="traitement.php" method="post">
+    <form class="form_quiz" action="<?php echo home_url('programme'); ?>" method="get">
 
         <fieldset>
             <legend>Question 1 :</legend>
@@ -20,9 +20,9 @@
         <fieldset>
             <legend>Question 2 :</legend>
             <p>Quel est votre poid actuel ?</p>
-            <input type="poid en kg"
-                    id="poid en kg"
-                    name="poid en kg"
+            <input type="poids en kg"
+                    id="poids en kg"
+                    name="poids en kg"
                     placeholder="En kg"/>
         </fieldset>
 
@@ -30,9 +30,9 @@
             <legend>Question 3 :</legend>
             <p>Comment se déroulent généralement vos journées ?</p>
             <select id="q3" name="q3">
-                <option value="Pomme">assis ou couché toute la journée</option>
-                <option value="Banane">je marche et bouge régulièrement</option>
-                <option value="Orange">je suis toujours en mouvement</option>
+                <option value="premier">assis ou couché toute la journée</option>
+                <option value="deuxieme">je marche et bouge régulièrement</option>
+                <option value="troisieme">je suis toujours en mouvement</option>
             </select>
         </fieldset>  
         
@@ -40,14 +40,14 @@
             <legend>Question 4 :</legend>
             <p>Quel est votre objectif ?</p>
             <select id="q3" name="q3">
-                <option value="Pomme">Perdre du poid</option>
-                <option value="Banane">Gagner du poid</option>
-                <option value="Orange">Maintenir la forme</option>
+                <option value="Premier">Perdre du poids</option>
+                <option value="deuxieme">Gagner du poids</option>
+                <option value="troisieme">Maintenir la forme</option>
             </select>
         </fieldset>
 
         
-        <input type="submit" value="Soumettre">
+        <button  class="btn" onclick="window.location.href='<?php echo home_url('programme') ?>'"> Confirmer</button>
     </form>
 
 

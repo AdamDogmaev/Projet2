@@ -1,6 +1,6 @@
 <?php get_header(); ?> 
 
-<section class="form_cont">
+<section class="form_cont" id="form_cont_co">
     <div id="titre_co">
     <h2>Heureux de vous revoir!</h2>
     </div>
@@ -8,7 +8,7 @@
 
     <div class="form_co">
 
-      <form action="#">
+      <form action="<?php echo home_url('dashboard'); ?>" method="get">
 
         <div class="main-user-co">
             
@@ -29,8 +29,8 @@
         </div>
 
         <div class="co_form">
-            <div id="co_form_text"><a href="http://localhost/wordpress/inscription/">Je n'ai pas encore de compte</a></div>
-            <div id="co_form_btn"><button class="btn" >Confirmer</button></div>
+            <div id="co_form_text"><a href="<?php echo home_url('inscription') ?>">Je n'ai pas encore de compte</a></div>
+            <div id="co_form_btn"><button class="btn" href="<?php echo home_url('dashboard') ?>">Confirmer</button></div>
         </div>
           
         </div>

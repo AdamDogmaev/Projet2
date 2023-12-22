@@ -11,9 +11,13 @@
         <div class="para_aft">
             <p>Il nous reste encore une dernière étape. Afin de pouvoir prendre soin de vous, nous devons mieux vous connaître. Remplissons le formulaire pour avoir accès à votre suivi personnalisé !</p>
         </div>
-        <button id="aft_btn"class="btn" type="button">C'est parti!</button>
+        <a id="aft_btn" class="btn" href="<?php echo home_url('formulaire') ?>">C'est parti!</a>
 
     </div>
 </section>
+
+    
+
+
 
 <?php get_footer(); ?>

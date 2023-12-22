@@ -69,7 +69,9 @@ header.scrolled{
 
 }
 
-
+#btn_padre{
+    color: #ffffff;
+}
 .btn {
     background-color: #507A2E;
     color: white;
@@ -96,6 +98,24 @@ header.scrolled{
 }
 
 
+
+.logo-animation {
+    animation: bounce 0.5s ease; /* Remplacez 'bounce' par le nom de votre animation CSS */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     .btn{
         font-size: 12px;
@@ -109,7 +129,7 @@ header.scrolled{
 /* --------------- début menu burger ---------------*/
 
 /* Sidenav menu */
-.sidenav {
+ .sidenav {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -145,6 +165,7 @@ header.scrolled{
   /* Active class */
   .sidenav.active {
     right: 0;
+    background-color: #ffffff;
   }
   
   /* Close btn */
@@ -187,6 +208,9 @@ header.scrolled{
     .desktop-nav {
       display: none;
     }
+    .sidenav a:hover {
+        color: #4F7A2D;
+      }
   }
 
 /* --------------- fin menu burger ---------------*/
@@ -217,21 +241,35 @@ header.scrolled{
     background-color: #000000;
 }
 
-.contenu img {
+#video{
+
+    object-fit: cover;
     width: 100%;
-    position: relative;
+    height: 80vh;
+
 }
 
 .text_contenu {
     position: absolute;
     text-align: center;
-    top: 50%; /* Ajustez la position verticale du texte */
-    left: 50%; /* Ajustez la position horizontale du texte */
+    top: 49.7%; /* Ajustez la position verticale du texte */
+    left: 55%; /* Ajustez la position horizontale du texte */
     transform: translate(-10%, -50%); /* Centre le texte par rapport à son conteneur */
     color: #ffffff;
-    padding: 20px;
     box-sizing: border-box;
     max-width: 80%; /* Ajustez la largeur maximale du texte */
+    background-color: rgba(0,0 ,0 , 0.3);
+    height: 80vh;
+    width: 50%;
+    padding-top: 14%;
+
+    padding-left: 8%;
+    padding-right: 8%;
+ 
+}
+
+.bouton_sec_1{
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -244,8 +282,17 @@ header.scrolled{
         background-color: rgba(0, 0, 0, 0.5);
         padding-left: 20%;
         padding-right: 20%;
-        padding-top: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        left: 50%;
 
+    }
+
+    #video{
+        object-fit: cover;
+        width: 100%;
+        height: 20vh;
+        
     }
   
 }
@@ -298,7 +345,7 @@ header.scrolled{
     background-color: #FFCF02;
     color: #000000;
     margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    text-decoration: none;
 }
 
 #bouton_section2:hover{
@@ -335,7 +382,7 @@ header.scrolled{
 }
 .img_section3{
     height: auto;
-    width: 100%;
+    width: 50%;
     margin:0;
     padding: 0;
     left: 0;
@@ -373,10 +420,6 @@ margin-bottom: 20px;
         flex-direction: row;
     }
 
-    .img_section3 {
-        height: 100vh;
-        width: 50%;
-    }
 
     .section3_texte {
         width: 50%;
@@ -402,6 +445,10 @@ margin-bottom: 20px;
 
     .section3_texte {
         font-size: 15px; 
+    }
+    
+    .img_section3 {
+        display: none;
     }
 }
 
@@ -481,10 +528,7 @@ footer {
 
 /* --------------- début inscription ---------------*/
 
-.page-id-12 {
 
-    background-color:#ffeb99 ;
-}
 
 
 #titre_insc{
@@ -508,6 +552,7 @@ footer {
 
     padding-top: 2%;
     padding-bottom: 10%;
+    background-color: #ffeb99;
 }
 .form {
     width: 51%;
@@ -516,16 +561,21 @@ footer {
     background-color: #ffffff;
     border-radius: 10px;
     position: relative;
-    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     z-index: 3 ;
+    margin-left: 2%;
 }
 
 .img_insc {
-    width: 46%;
+    width: 44%;
+    max-width: 44%;
     height: auto;
     position: relative;
     margin-left: 54%; 
-    margin-top: -41.5%;
+    margin-top: -39.5%;
     display: flex;
     z-index: 1;
 }
@@ -629,9 +679,35 @@ footer {
 /* --------------- début connection ---------------*/
 
 
-.page-id-15  {
+#form_cont_co{
 
-    background-color:#b8caab ;
+    background-color: #b8caab;
+
+}
+
+
+.container_prop {
+    display: flex;
+    flex-direction: column;
+    background-color:#edf1e9;
+}
+
+.propos_1{
+    padding-top: 5%;
+}
+
+.propos_1,
+.propos_2,
+.propos_3 {
+    margin-bottom: 20px; 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.rs_prop{
+
+    width: 20%;
+    padding-bottom: 10%;
 }
 
 
@@ -722,6 +798,8 @@ footer {
     padding: 0 10px;
     background-color:#edf1e9;
 
+    background-color: #edf1e9;
+
 }
 
 
@@ -759,37 +837,37 @@ footer {
 
 /* --------------- début aft_inscription ---------------*/
 
-.page-id-20 {
-
-    background-color:#ffeb99
-}
 
 .container_aft{
 
 
-    background-color: #ffffff;
+    background-color: #ffeb99;
 
     width: 40%;
-    height: auto;
+    height: 30vh;
     margin-top: 5%;
     margin-bottom: 15%;
-    margin-left: 30%;
+    margin-left: 28%;
     margin-right: 30%;
     box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    padding: 30px;
 
 }
 
 .title_aft{
     text-align: center;
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .para_aft{
-    background-color: #ffffff;
+    background-color: #ffeb99;
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 5%;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+
 }
 
 #aft_btn{
@@ -797,6 +875,7 @@ footer {
     color: #000000;
     margin-left: 38%;
     margin-bottom: 5%;
+    text-decoration: none;
 
 }
 
@@ -811,9 +890,6 @@ footer {
 /* --------------- début formulaire ---------------*/
 
 
-.page-id-22 {
-    background-color: #b8caab;
-}
 
 .title_quiz{
 
@@ -1010,26 +1086,21 @@ input[type="submit"]:hover {
 
 
 
-form {
+.form_prgm {
     text-align: left;
 }
 
-label {
+.form_prgm label {
     display: block;
     margin-bottom: 8px;
 }
 
-input, select {
+.form_prgm input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
     box-sizing: border-box;
 }
-
-
-
-
-
 
 .box_prgm {
     position: relative;
@@ -1042,8 +1113,6 @@ input, select {
     text-align: center;
     z-index: 1;
 }
-
-
 
 #prgm_mob_2{
     display: none;
@@ -1101,5 +1170,173 @@ input, select {
     }
 }
 
+/* --------------- début dashboard ---------------*/
+
+.boite_dash{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+
+}
+
+.sous_boite{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.dash_titre{
+    position: relative;
+    background-color: #ffeb99;
+    width: 60%;
+    height: 20%;
+    border-radius: 20px;
+    text-align: center;
+    left: 20%;
+}
+.dash_gauche{
+    position: relative;
+    background-color: #ffeb99;
+    width: 15%;
+    height: 73%;
+    padding: 15px;
+    border-radius: 20px;
+    left: 0;
+}
+.dash_centre{
+    position: relative;
+    background-color: #ffeb99;
+    width: 60%;
+    height: 80%;
+    left: 3%;
+    border-radius: 20px;
+
+}
+.dash_droite{
+    position: relative;
+    background-color: #ffeb99;
+    width: 15%;
+    height: 80%;
+    left: 6%;
+   border-radius: 20px;
+}
+
+.graph_dash{
+    position: relative;
+    background-color: #FFCF02;
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    right: 10%;
+}
+.stat_dash{
+    position: relative;
+    background-color: #FFCF02;
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    right: 10%;
+}
+
+.dash_gauche a,
+.dash_centre a,
+.dash_droite a {
+    text-decoration: none;
+    color: #000000;
+ 
+}
+.dash_gauche ul,
+.dash_centre ul,
+.dash_droite ul {
+    list-style: none;
+}
+.dash_gauche li,
+.dash_centre li,
+.dash_droite li {
+    margin-bottom: 60px;
+}
+
+
+/* --------------- début a popos---------------*/
+
+.container_prop {
+    display: flex;
+    flex-direction: column;
+    background-color:#edf1e9;
+}
+
+.propos_1{
+    padding-top: 5%;
+}
+
+.propos_1,
+.propos_2,
+.propos_3 {
+    margin-bottom: 20px; 
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.rs_prop{
+
+    width: 20%;
+    padding-bottom: 10%;
+}
+
+/* --------------- fin a popos---------------*/
+
+/* --------------- début mention---------------*/
+
+.mention_cont{
+
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.mention_ainer{
+    width: 55%;
+}
+
+/* --------------- fin mention---------------*/
+
+
+/* --------------- pop up---------------*/
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+
+    width: 50%;
+}
+
+#closePopupBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 

@@ -59,7 +59,7 @@
     <div class="box_prgm">
         <h2>Bravo!</h2>
 
-        <form action="#" method="post">
+        <form class="form_prgm" action="<?php echo home_url('dashboard'); ?>" method="get">
    
         <label for="reussi">Avez-vous réussi à aller jusqu'au bout?</label>
         <select id="reussi" name="reussi" required>
@@ -70,7 +70,7 @@
         <label for="temps">En combien de temps avez-vous fini?</label>
         <input type="text" id="temps" name="temps" placeholder="Entrez le temps" required>
 
-        <button class="btn">confirmer</button>
+        <button class="btn" onclick="window.location.href='<?php echo home_url('dashboard') ?>'">confirmer</button>
         </form>
     </div>
     </div>

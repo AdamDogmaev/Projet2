@@ -10,7 +10,7 @@
     
     <div class="form">
 
-      <form action="#">
+      <form action="<?php echo home_url('aft_inscription'); ?>" method="get">
 
         <div class="main-user-info">
             
@@ -59,9 +59,9 @@
         </div>
 
         <div class="form_val">
-            <div id="text_val"><a href="http://localhost/wordpress/connection/">J'ai déjà un compte</a></div>
+            <div id="text_val"><a href="<?php echo home_url('connection') ?>">J'ai déjà un compte</a></div>
 
-            <button class="btn" id="bouton_insc" type="button">Confirmer</button>      
+            <button class="btn" id="bouton_insc" onclick="window.location.href='<?php echo home_url('aft_inscription') ?>'">Confirmer</button>      
 
         </div>
         </div>
